@@ -1,0 +1,97 @@
+// ==============================================================
+// == Layout
+// ==============================================================
+.content
+	//debug()
+	overflow: hidden
+	width: 100%
+	margin: $small-spacing 0
+	
+	+above('l')
+		margin-bottom: $spacing
+	
+.sidebar
+	//debug()
+	overflow: hidden
+	width: 100%
+	margin: $large-spacing 0
+
+// .l-front
+// 	.content
+// 		lost-center: 500px
+// ---------------------------
+// + 	Page layout
+//		2 columns
+//			1 sidebar
+//			1 content
+// ---------------------------
+.l-page
+	//debug()
+	
+	+above('l')
+		.content
+			lost-column: 2/4
+		
+		.sidebar
+			lost-column: 1/4
+		
+// ---------------------------
+// + 	2 Columns
+//			Left sidebar
+//			Right sidebar
+// ---------------------------
+.l-2-cols // Left sidebar - default
+	
+	+above('l')
+		.sidebar
+			lost-column: 1/4
+		
+		.content
+			lost-column: 3/4
+		
+.l-sidebar-r // Right sidebar
+		
+	+above('l')
+		.sidebar
+			lost-move: 3/4
+	
+		.content
+			lost-move: -1/4
+		
+
+// ---------------------------
+// + 	Loops layout
+// ---------------------------
+
+		
+// ---------------------------
+// + 	Grid
+// ---------------------------
+.l-grid
+	cf()
+	
+	// .l-grid__img
+	// 	lost-column: 1/4
+		
+	// .l-grid__content
+	// 	lost-column: 3/4
+
+.l-grid-1
+	
+	.l-grid__items
+		lost-column: 1/1
+		
+		.l-grid__content
+			lost-column: 1/1
+		
+.l-grid-2
+	
+	.l-grid__items
+		lost-column: 1/2 2
+		
+
+.l-grid-waffle-2
+	
+	+above('m')
+		.l-grid__items
+			lost-waffle: 1/2 2 50px

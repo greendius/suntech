@@ -1,0 +1,110 @@
+<!-- Vendor minified JS -->
+<script src="/js/vendor.js"></script>
+
+<!-- Custom minified JS -->
+<script src="/js/script.js"></script>
+
+<script>
+// $(document).ready(function(){
+//   $('#slick-slider').slick({
+//  dots: true
+//   });
+// });
+</script>
+
+<!-- Responsive menu js -->
+<script type="text/javascript">
+	var nav = responsiveNav(".nav-collapse", { // Selector
+		animate: true, // Boolean: Use CSS3 transitions, true or false
+		transition: 284, // Integer: Speed of the transition, in milliseconds
+		label: "Click", // String: Label for the navigation toggle
+		insert: "before", // String: Insert the toggle before or after the navigation
+		customToggle: "", // Selector: Specify the ID of a custom toggle
+		closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
+		openPos: "relative", // String: Position of the opened nav, relative or static
+		navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
+		navActiveClass: "js-nav-active", // String: Class that is added to <html> element when nav is active
+		jsClass: "js", // String: 'JS enabled' class which is added to <html> element
+		init: function(){}, // Function: Init callback
+		open: function(){}, // Function: Open callback
+		close: function(){} // Function: Close callback
+	});
+</script>
+
+<script type="text/javascript">
+			$(function() {
+
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$navDots = $( '#nav-dots' ).hide(),
+						$nav = $navDots.children( 'span' ),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								// $navArrows.show();
+								// $navDots.show();
+								// $shadow.show();
+
+							},
+							onBeforeChange : function( pos ) {
+
+								$nav.removeClass( 'nav-dot-current' );
+								$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+							}
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+							$nav.each( function( i ) {
+							
+								$( this ).on( 'click', function( event ) {
+									
+									var $dot = $( this );
+									
+									if( !slicebox.isActive() ) {
+
+										$nav.removeClass( 'nav-dot-current' );
+										$dot.addClass( 'nav-dot-current' );
+									
+									}
+									
+									slicebox.jump( i + 1 );
+									return false;
+								
+								} );
+								
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>

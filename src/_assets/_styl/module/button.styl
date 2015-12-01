@@ -1,0 +1,27 @@
+// ==============================================================
+// == Button
+// ==============================================================
+
+$btn-font-family = $font-family
+$btn-font-size = 13px
+$btn-font-color = $font-color
+$btn-line-height = 1
+$btn-bg-color = #eeecec
+$btn-border-color = $btn-bg-color
+$btn-border-radius = 2px
+
+// Hover
+$btn-hover-font-color = darken( $btn-font-color, 10% )
+$btn-hover-bg-color = darken( $btn-bg-color, 10% )
+$btn-hover-border-color = $btn-hover-bg-color
+
+// ---------------------------
+// +	Button default
+// ---------------------------
+button,
+*[type=button], *[role=button],
+*[type=submit], *[role=sumbit],
+*[type=reset], *[role=reset],
+.button,
+.btn
+	button($btn-bg-color, 13, $btn-font-color) // button($color,$size,$text-color)

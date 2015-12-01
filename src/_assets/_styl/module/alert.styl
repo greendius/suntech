@@ -1,0 +1,59 @@
+// ==============================================================
+// == Alert
+// ==============================================================
+$alert-font-color = $font-color
+$alert-bg-color = #ebf7e3
+$alert-border-size = 4px
+$alert-border-color = $border-color
+$alert-border-radius = 0
+
+// Info
+$alert-info-font-color = darken($info-color, 40%)
+$alert-info-bg-color = $info-color
+$alert-info-border-color = darken($info-color, 10%)
+
+// Warn
+$alert-warn-font-color = darken($warn-color, 50%)
+$alert-warn-bg-color = $warn-color
+$alert-warn-border-color = darken($warn-color, 20%)
+
+// Error
+$alert-error-font-color = darken($error-color, 40%)
+$alert-error-bg-color = $error-color
+$alert-error-border-color = darken($error-color, 10%)
+
+.alert-messages
+	margin: $spacing auto
+
+.alert
+	padding: $spacing
+	color: $alert-font-color
+	background-color: $alert-bg-color
+	border-left: $alert-border-size solid $alert-border-color
+
+	p:last-child
+		margin-bottom: 0
+
+	.icon
+		margin-right: .5rem
+
+	.alert-close
+		float: right
+
+// Info
+.alert-info
+	color: $alert-info-font-color
+	background-color: $alert-info-bg-color
+	border-color: $alert-info-border-color
+
+// Warning
+.alert-warn
+	color: $alert-warn-font-color
+	background-color: $alert-warn-bg-color
+	border-color: $alert-warn-border-color
+
+// Error
+.alert-error
+	color: $alert-error-font-color
+	background-color: $alert-error-bg-color
+	border-color: $alert-error-border-color

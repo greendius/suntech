@@ -1,0 +1,139 @@
+// ==============================================================
+// == Mixins
+// ==============================================================
+
+
+// Clearfix
+cf()
+	*zoom: 1
+	&:before, &:after
+		content: " "
+		display: table
+	&:after
+		clear: both
+
+ // Quickly center any element within its parent. Requires width or max-width to be set.
+$center-block
+	display: block
+	margin-left: auto
+	margin-right: auto
+
+// Truncate - An easy way to truncate text with an ellipsis. Requires the element to be block or inline-block.
+$text-truncate 
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	
+$visuallyhidden
+	margin: -1px
+	padding: 0
+	width: 1px
+	height: 1px
+	overflow: hidden
+	clip: rect(0 0 0 0)
+	clip: rect(0, 0, 0, 0)
+	position: absolute
+
+// Box-sizing
+box-sizing($box-model)
+	-webkit-box-sizing: $box-model // Safari <= 5
+	-moz-box-sizing: $box-model // Firefox <= 19
+	box-sizing: $box-model
+
+// Placeholder 
+placeholder()
+	&::-webkit-input-placeholder
+			{block}
+	&:-moz-placeholder
+			{block}
+	&::-moz-placeholder
+			{block}
+	&:-ms-input-placeholder
+			{block}
+
+// Border radius
+border-radius($radius)
+	-webkit-border-radius: $radius
+	border-radius: $radius
+	background-clip: padding-box // stops bg color from leaking outside the border
+		
+// Single side border-radius
+border-top-radius($radius)
+	-webkit-border-top-right-radius: $radius
+	border-top-right-radius: $radius
+	-webkit-border-top-left-radius: $radius
+	border-top-left-radius: $radius
+	background-clip: padding-box
+	
+border-right-radius($radius)
+	-webkit-border-bottom-right-radius: $radius
+	border-bottom-right-radius: $radius
+	-webkit-border-top-right-radius: $radius
+	border-top-right-radius: $radius
+	background-clip: padding-box
+	
+border-bottom-radius($radius)
+	-webkit-border-bottom-right-radius: $radius
+	border-bottom-right-radius: $radius
+	-webkit-border-bottom-left-radius: $radius
+	border-bottom-left-radius: $radius
+	background-clip: padding-box
+	
+border-left-radius($radius)
+	-webkit-border-bottom-left-radius: $radius
+	border-bottom-left-radius: $radius
+	-webkit-border-top-left-radius: $radius
+	border-top-left-radius: $radius
+	background-clip: padding-box
+
+// Opacity
+// opacity($opacity)
+// 	opacity: $opacity
+// 	$opacity-ie = $opacity * 100
+// 	filter: alpha(opacity = $opacity-ie) //IE8
+	
+// // Absolute position
+// abs-pos($top = auto, $right = auto, $bottom = auto, $left = auto)
+// 	top: $top
+// 	right: $right
+// 	bottom: $bottom
+// 	left: $left
+// 	position: absolute
+	
+// Set a rem font size with pixel fallback
+// calculateRem($size)
+// 	$remSize = $size / 16px
+// 	$remSize * 1rem
+	
+// fontSize($size)
+// 	font-size: $size
+// 	font-size: calculateRem($size)
+
+	
+// Animations and keyframes
+// keyframes($animation-name)
+//   @-webkit-keyframes
+//     @content
+//   @-moz-keyframes
+//     @content
+//   @-ms-keyframes
+//     @content
+//   @-o-keyframes
+//     @content
+//   @keyframes
+//     @content
+// animation($str)
+//   -webkit-animation: {$str}
+//   -moz-animation: {$str}
+//   -ms-animation: {$str}
+//   -o-animation: {$str}
+//   animation: {$str}
+	
+// Transitions
+transition()
+	-webkit-transition: $args
+	-moz-transition: $args
+	-ms-transition: $args
+	-o-transition: $args
+	transition: $args
+	

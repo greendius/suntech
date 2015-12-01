@@ -1,0 +1,41 @@
+{
+  "name": "Jekyll-Gulp-Starter-Kit",
+  "version": "0.1.0",
+  "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
+  "main": "gulpfile.js",
+  "author": "Nicholas Ruggeri",
+  "devDependencies": {
+    "axis": "^0.5.2",
+    "browser-sync": "^2.10.0",
+    "cssnano": "^3.3.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "^0.7.3",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.1.0",
+    "gulp-uglify": "^1.5.1",
+    "lost": "^6.6.2",
+    "rucksack-css": "^0.8.5",
+    "run-sequence": "^1.1.5",
+    "rupture": "^0.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicholasruggeri/jekyll-gulp-starter-kit.git"
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "browsersync"
+  ],
+  "bugs": {
+    "url": "https://github.com/nicholasruggeri/jekyll-gulp-starter-kit/issues"
+  },
+  "homepage": "https://github.com/nicholasruggeri/jekyll-gulp-sass-browser-sync"
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	{% include _head.html %}
+
+	<body class="{{ page.type }} {{ page.layout-class }}">
+
+		<div id="site">
+
+			<!-- Header -->
+			{% include _header.html %}
+
+			<!-- Content -->
+			<section class="wrapper">
+				{{ content }}
+			</section>
+
+			<!-- Footer -->
+			{% include _footer.html %}
+
+		</div><!-- /#site -->
+
+		<!-- Scripts -->
+		{% include _bottom.html %}
+	</body>
+</html>

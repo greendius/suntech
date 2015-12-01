@@ -1,0 +1,24 @@
+---
+layout: archive
+type: archive
+folder: showcases
+
+title: ผลงาน
+---
+
+<div class="loops l-grid l-grid-2">
+	{% for showcase in site.pages %}
+		{% if showcase.type == 'showcase' %}
+
+		<div class="loop__items l-grid__items">
+			
+				<img class="loop__img l-grid__img" src="{{ site.baseurl }}/img/products/{{ showcase.image }}" alt="">
+				<div class="loop__content l-grid__content">
+					<a class="loop__title loop__link" href="{{ site.baseurl }}{{ showcase.url }}">{{ showcase.title }}</a>
+				</div>		
+			
+		</div>
+		
+		{% endif %}
+	{% endfor %}
+</div>

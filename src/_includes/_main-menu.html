@@ -1,0 +1,9 @@
+<nav class="main-menu nav-collapse {{ include.menuclass }}">
+	<ul class="menu">
+        <li class="menu__item"><a class="menu__link hvr-bounce-to-right{% if page.url == site.baseurl %} menu__link--current{% endif %}" href="{{ site.baseurl }}/">หน้าหลัก</a></li>
+        <li class="menu__item"><a class="menu__link hvr-bounce-to-right{% if page.url contains 'about' %} menu__link--current{% endif %}" href="{{ site.baseurl }}/about/">เกี่ยวกับเรา</a></li>
+        <li class="menu__item"><a class="menu__link hvr-bounce-to-right{% if page.url contains 'products' %} menu__link--current{% endif %}" href="{{ site.baseurl }}/products/">สินค้าและบริการ</a></li>
+        <li class="menu__item"><a class="menu__link hvr-bounce-to-right{% if page.url contains 'showcases' %} menu__link--current{% endif %}" href="{{ site.baseurl }}/showcases/">ผลงาน</a></li>
+        <li class="menu__item"><a class="menu__link hvr-bounce-to-right{% if page.url contains 'contact' %} menu__link--current{% endif %}" href="{{ site.baseurl }}/contact/">ติดต่อเรา</a></li>
+    </ul>
+</nav>

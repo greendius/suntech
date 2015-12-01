@@ -1,0 +1,38 @@
+// ==============================================================
+// == Button primary
+// ==============================================================
+
+$btn-primary-font-color = rgba( 255,255,255,.7 )
+$btn-primary-bg-color = $primary-color
+$btn-primary-border-color = darken( $primary-color, 10% )
+
+$btn-primary-hover-font-color = rgba( 255,255,255, 1 )
+$btn-primary-hover-bg-color = darken( $btn-primary-bg-color, 5% )
+$btn-primary-hover-border-color = darken( $btn-primary-border-color, 10% )
+
+.btn-primary
+	color: $btn-primary-font-color
+
+	background-color: $btn-primary-bg-color
+	border-color: $btn-primary-border-color
+
+	&:hover
+		color: $btn-primary-hover-font-color
+		background: $btn-primary-hover-bg-color
+		border-color: $btn-primary-hover-border-color
+
+	&:active,
+	&.selected
+		@extend .btn-primary:hover
+
+	&.selected:hover
+		//background-color: darken($brand-primary, 10%)
+
+	&:disabled,
+	&.disabled
+		&,
+		&:hover
+			color: #fefefe
+			background-color: $btn-primary-bg-color
+			background-color: rgba( desaturate( $btn-primary-bg-color, 20% ), .5 )
+			border-color: rgba( $btn-primary-bg-color, .3 )

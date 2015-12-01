@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% if page.url contains 'products' %}
+	{% include _aside-product-images.html %}
+{% elsif page.url contains 'about' or page.url contains 'contact' %}
+	{% include _aside-address.html %}
+{% endif %}
+
+<main class="content">
+	{{ content }}
+</main>

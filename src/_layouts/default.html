@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	
+	{% include _head.html %}
+
+	<body class="{{ page.type }} {{ page.layout-class }}">
+
+		<div id="site">
+
+			<!-- Header -->
+			{% include _header.html %}
+
+			<!-- Featured img -->
+			{% include _front-slider.html %}
+
+			<!-- Content -->
+			<div id="wrapper">
+				
+				<div class="content-wrapper">
+
+					<!-- {% if page.type != 'front-page' %}
+						<header class="header-title">
+							<h1 class="page-title">{{ page.title }}</h1>
+						</header>
+					{% endif %} -->
+
+					{{ content }}
+
+				</div><!-- /.content-wrapper -->
+
+			</div><!-- /#wrapper -->
+
+			<!-- Footer -->
+			{% include _footer.html %}
+
+		</div><!-- /#site -->
+
+		<!-- Scripts -->
+		{% include _bottom.html %}
+	</body>
+</html>

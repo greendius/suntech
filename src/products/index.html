@@ -1,0 +1,63 @@
+---
+layout: page
+type: archive
+folder: products
+
+layout-class: l-2-cols l-sidebar-r
+
+title: สินค้าและบริการ
+---
+
+
+<div class="loops l-grid l-grid-1">
+
+	{% for product in site.data.products %}
+
+		<div class="loop__items l-grid__items">
+
+			<!-- <div class="loop__img">
+				<img src="{{ site.baseurl }}/img/products/{{ product.image }}" alt="{{ product.title }}">
+			</div> -->
+			
+			<div class="loop__content l-grid__content">
+				<!-- <h4><a href="{{ site.baseurl }}{{ product.url }}" title="{{ product.title }}">{{ product.title }}</a></h4> -->
+				<h4 class="loop__title">{{ product.title }}</h4>
+				<p class="loop__excerpt">{{ product.content }}</p>
+			</div>
+			
+		</div><!-- /.l-loop-items -->
+
+	{% endfor %}
+
+</div><!-- /.l-loops -->
+
+<div class="wrapper">
+
+	<h4>สินค้าที่เราจัดจำหน่ายและบริการติดตั้งพร้อมบริการหลังการขาย มีหลากหลายยี่ห้อ อาทิ</h4>
+	<table class="table stable">
+		<tr>
+			<td><h6>ระบบเสียง</h6></td>
+			<td>
+				<img src="{{ site.baseurl }}/img/products/audio/audio-logos.jpg" />
+			</td>
+		</tr>
+		<tr>
+			<td><h6>ระบบภาพ</h6></td>
+			<td><img src="{{ site.baseurl }}/img/products/display/display-logos.jpg" /></td>
+		</tr>
+		<tr>
+			<td><h6>ระบบแสง</h6></td>
+			<td><img src="{{ site.baseurl }}/img/products/lighting/lighting-logos.jpg" /></td>
+		</tr>
+		<tr>
+			<td><h6>ควบคุมระบบอัตโนมัติ</h6></td>
+			<td><img src="{{ site.baseurl }}/img/products/auto/auto-logos.jpg" /</td>
+		</tr>
+		<tr>
+			<td><h6>CCTV</h6></td>
+			<td><img src="{{ site.baseurl }}/img/products/cctv/cctv-logos.jpg" /</td>
+		</tr>
+	</table>
+
+</div><!-- /.wrapper -->
+

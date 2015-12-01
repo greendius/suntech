@@ -1,0 +1,30 @@
+<section class="wrapper">
+	<div class="content-wrapper">
+
+		<div id="slide">
+			
+			<!-- declare a slideshow -->
+			<div id="slide-wrapper" class="cycle-slideshow" data-cycle-next="#slide-next" data-cycle-prev="#slide-prev" data-cycle-fx="tileSlide" data-cycle-pager=".slide-pager">
+				<img src="{{ site.baseurl }}/img/slide/slide-01.jpg" alt="image-1"/>
+				<img src="{{ site.baseurl }}/img/slide/slide-02.jpg" alt="image-2"/>
+			</div>
+
+			<!-- Prev-Next buttons -->
+			<div class="slide-prev-next"> 
+				<a href="# "id="slide-prev"></a>  
+				<a href="#" id="slide-next"></a>
+			</div>
+
+			<!-- Pager -->
+			<div class="slide-pager"></div>
+
+			{% if page.type != 'front-page' %}
+				<header class="header-title">
+					<h1 class="page-title">{{ page.title }}</h1>
+				</header>
+			{% endif %}
+
+		</div><!-- /#slide -->
+
+	</div>
+</section><!-- /wrapper -->

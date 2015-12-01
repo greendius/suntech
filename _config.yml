@@ -1,0 +1,25 @@
+# Dependencies
+markdown: redcarpet
+highlighter: pygments
+
+# Setup
+name: Suntech.co.th
+title: "Suntech Supply Service"
+tagling: ""
+description: ""
+
+source: src
+destination: web
+baseurl: ""
+
+version: 0.1-dev
+
+permalink: pretty
+
+# Others
+author:
+  name: "K Worapon"
+  url: "http://greenity.me"
+
+github:
+  repo: ""

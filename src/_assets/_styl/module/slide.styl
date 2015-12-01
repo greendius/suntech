@@ -1,0 +1,108 @@
+// ==============================================================
+// == Slide image
+// ==============================================================
+#slide
+	//debug()
+	position: relative
+		
+	#slide-wrapper
+		overflow: hidden
+		z-index: -9
+
+		width: 100%
+		max-width: 1140px
+		height: auto
+		
+		margin: $large-spacing auto $small-spacing
+
+		box-shadow: inset 0 1px 0 0 rgba( 0, 0, 0, 0.05 ), inset 0 2px 4px 0 rgba( 0, 0, 0, 0.06 )
+		
+		+above('l')
+			height: 380px
+	
+	.slide-prev-next
+		position: absolute
+		top: 50%
+		z-index: 9999
+		
+		width: 100%
+		max-width: 1140px
+		height: auto
+		
+		margin-top: -40px
+		//outline: 3px dotted aqua
+		
+		#slide-prev,
+		#slide-next
+			display: inline-block
+			font: normal normal normal $fa-font-size-base/$fa-line-height-base FontAwesome // shortening font declaration
+			font-size: 14px
+			text-rendering: auto // optimizelegibility throws things off #1094
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			
+			position: absolute
+			width: 20px
+			height: 22px
+			padding: 5px
+			
+			background: #fff
+			border-radius: 2px
+			opacity: .1
+			
+			transition: all .3s ease-in-out 0s
+			
+		#slide-prev,
+		#slide-next
+			&:hover
+				opacity: 1
+				
+		#slide-prev,
+		#slide-next
+			&:hover::before
+				visibility: hidden
+			
+		#slide-prev
+			left: 10px
+			
+		#slide-next
+			right: 10px
+		
+		#slide-prev::after,
+		#slide-next::after
+			
+			display: block
+			visibility: visible !important
+			
+		#slide-prev::after
+			content: $fa-var-chevron-left
+			
+		#slide-next::after
+			content: $fa-var-chevron-right
+			
+	.slide-pager
+		text-align: center
+		margin-bottom: $large-spacing
+		
+		span
+			display: inline-block
+			font: normal normal normal $fa-font-size-base/$fa-line-height-base FontAwesome // shortening font declaration
+			font-size: 14px
+			text-rendering: auto // optimizelegibility throws things off #1094
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			visibility: hidden
+			
+			margin: 0 2px
+			
+		span::after
+			content: $fa-var-circle
+			visibility: visible
+			
+		span:hover::after
+			cursor: pointer
+			color: lighten( $action-color, 30% )
+			
+		span.cycle-pager-active::after
+			color: $action-color
+

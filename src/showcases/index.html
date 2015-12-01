@@ -1,0 +1,23 @@
+---
+layout: page
+type: archive
+folder: showcases
+
+layout-class: l-col-1
+
+title: ผลงาน
+---
+
+<div class="loops l-grid">
+	{% for showcase in site.data.showcases %}
+
+		<div class="loop__items l-grid__items">
+
+			<div class="loop__content l-grid__content">
+				<h5 class="loop__title loop__excerpt">{{ showcase.title }}</h5>
+			</div>
+			
+		</div>
+		
+	{% endfor %}
+</div>

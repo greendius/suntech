@@ -1,0 +1,81 @@
+<!-- <ul class="something">
+{% for image in page.images %}
+	<li class="something">
+    	<a rel="something" class="something" href="{{ site.baseurl }}/img/products/{{ image }}">
+    		<img src="{{ site.baseurl }}/img/products/{{ image }}" />
+    	</a>
+  	</li>
+{% endfor %}
+</ul> -->
+
+<aside class="sidebar">
+	<h4 class="sidebar__title">ตัวอย่างสินค้าที่จัดจำหน่ายและบริการ</h4>
+
+	<div class="widget widget-gallery">
+		
+		<h5 class="widget__title">ระบบเสียง</h5>
+		<ul>
+			{% for image in site.data.products-image %}
+				{% if image.category == 'audio' %}
+					<li class="widget-gallery__items">
+				    	<a rel="" class="widget-gallery__link" data-lightbox="image-product-audio" href="{{ site.baseurl }}/img/products/audio/{{ image.image }}">
+				    		<img src="{{ site.baseurl }}/img/products/audio/{{ image.image }}" />
+				    	</a>
+				  	</li>
+			  	{% endif %}
+			{% endfor %}
+		</ul>
+
+	</div>
+
+	<div class="widget widget-gallery">
+
+		<h5 class="widget__title">ระบบภาพ</h5>
+		<ul>
+			{% for image in site.data.products-image %}
+				{% if image.category == 'display' %}
+					<li class="widget-gallery__items">
+				    	<a rel="" class="widget-gallery__link" data-lightbox="image-product-display" href="{{ site.baseurl }}/img/products/display/{{ image.image }}">
+				    		<img src="{{ site.baseurl }}/img/products/display/{{ image.image }}" />
+				    	</a>
+				  	</li>
+			  	{% endif %}
+			{% endfor %}
+		</ul>
+
+	</div>
+
+	<div class="widget widget-gallery">
+
+		<h5 class="widget__title">ระบบแสง</h5>
+		<ul>
+			{% for image in site.data.products-image %}
+				{% if image.category == 'lighting' %}
+					<li class="widget-gallery__items">
+				    	<a rel="" class="widget-gallery__link" data-lightbox="image-product-lighting" href="{{ site.baseurl }}/img/products/lighting/{{ image.image }}">
+				    		<img src="{{ site.baseurl }}/img/products/lighting/{{ image.image }}" />
+				    	</a>
+				  	</li>
+			  	{% endif %}
+			{% endfor %}
+		</ul>
+
+	</div>
+
+	<div class="widget widget-gallery">
+
+		<h5 class="widget__title">ระบบกล้องโทรทัศน์วงจรปิด(CCTV SYSTEM)</h5>
+		<ul>
+			{% for image in site.data.products-image %}
+				{% if image.category == 'cctv' %}
+					<li class="widget-gallery__items">
+				    	<a rel="" class="widget-gallery__link" data-lightbox="image-product-cctv" href="{{ site.baseurl }}/img/products/cctv/{{ image.image }}">
+				    		<img src="{{ site.baseurl }}/img/products/cctv/{{ image.image }}" />
+				    	</a>
+				  	</li>
+			  	{% endif %}
+			{% endfor %}
+		</ul>
+
+	</div>
+</aside>
